@@ -10,11 +10,12 @@ gcd:
 	bne x5,x0,gcd
 
 swap:
-	beq x5,x0,ans
+	
 	add x28,x6,0
 	add x6,x5,0
 	add x5,x28,0
-	bne x5,x0,ans
+	beq x6,x0,ans
+	bne x5,x0,gcd
 
 ans:
 	x7,x6,0
